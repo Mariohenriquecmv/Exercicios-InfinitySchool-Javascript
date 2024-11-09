@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+
+        #escreva{
+            color: rgb(0, 0, 0);
+            font-size: 30px;
+
+         }
+
+         #txt{
+            width: 300px;
+            height: 50px;
+         }
+
+         #botao{
+            width: 100px;
+            height: 55px;
+         }
+        </style>
+
+</head>
+<body>
+    <h1>Recurso para adicionar itens a uma lista não ordenada</h1>
+    <label id="escreva">Escreva para adicionar:</label>
+    <input type="text" id="txt" placeholder="Texto">
+    <button onclick="adicionarLista()" id="botao">Adicionar</button>
+    <h3>Sua Lista:</h3>
+    <ul>
+        <li id="lista"></li>
+    </ul>
+    
+</body>
+
+<script>
+    function adicionarLista(){
+        const adicionarParagrao = document.querySelector("#txt").value
+        const lista = document.querySelector("#lista")
+        lista.innerHTML += `<li>${adicionarParagrao}</li>`
+    }
+
+</script>
+</html>
